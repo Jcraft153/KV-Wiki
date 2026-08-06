@@ -13,7 +13,7 @@ var qs = []*survey.Question{
 	{
 		Name: "location",
 		Prompt: &survey.Input{
-			Message: "Where do you want to install Wiki.js?",
+			Message: "Where do you want to install KV's Wiki.js?",
 			Default: "./wiki",
 		},
 		Validate: survey.Required,
@@ -44,12 +44,13 @@ func main() {
 	bold := color.New(color.FgWhite).Add(color.Bold)
 
 	logo := `
-  __    __ _ _    _    _
- / / /\ \ (_) | _(_)  (_)___
- \ \/  \/ / | |/ / |  | / __|
-  \  /\  /| |   <| |_ | \__ \
-   \/  \/ |_|_|\_\_(_)/ |___/
-                    |__/
+▄    ▐▄                   ▄      ▓░  ▀█   ▄ ▓░ 
+▐█▌   █▄  ▄░   ▄        ▄░    ▄  ▀▀  █▒  █▄ ▀▀ 
+ ██  ▐░▒ █▓▌   █▌      █▓▌    █▌ ▓█▀ █▓ ▄░  ▓█▀
+ ▓█▄▄▓▀  ▒░▌   ▐█      ▒░     ▐█ █░  ██▀ ▒░ █░ 
+ █▌  ▀▓▄ ░▒█   █▌      ░▒  ▌  █▌  ▒  ░█  ░▒  ▒ 
+░░▄   █▓  ▀██▄░█        ▀▄██▄░█  ▒░  ▒░  ▒▀ ▒░ 
+▀▀ ▀  ▀     ▀▀▀           ▀ ▀▀   ▀▀▀ ▀▀▀ ▀▀ ▀▀▀
   `
 	color.Yellow(logo)
 
