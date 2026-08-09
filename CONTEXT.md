@@ -21,3 +21,7 @@ An explicit factory-reset operation that removes all installation data and retur
 ### Entry
 
 A canonical item of wiki content with a globally stable opaque identity. An Entry belongs to exactly one Datapack Installation; aliases and display paths are mutable, Datapack-scoped navigation records, while relationships and map references target the stable Entry identity.
+
+### Audience Area
+
+One separately authored content area of an Entry, classified as Widely Known, Gated, Secret, or GM Only. An Entry has at most one Area of each kind. Material requiring distinct discovery conditions is modelled as separate Entries with explicit relationships rather than multiple Areas of the same kind.
