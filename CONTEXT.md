@@ -20,7 +20,7 @@ An explicit factory-reset operation that removes all installation data and retur
 
 ### Entry
 
-A canonical item of wiki content with a globally stable opaque identity. An Entry belongs to exactly one Datapack Installation; aliases and display paths are mutable, Datapack-scoped navigation records, while relationships and map references target the stable Entry identity.
+A canonical item of wiki content implemented as one Wiki.js Page and carrying a globally stable opaque identity. An Entry is either local KV-Wiki content or belongs to one Datapack Installation; aliases and display paths are mutable navigation records, while relationships and map references target the stable Entry identity.
 
 ### Audience Area
 
@@ -32,8 +32,28 @@ A single GM/Admin-only note stored in its own table and linked to a Wiki.js Page
 
 ### Page Revision
 
-One coherent historical state of a Wiki.js Page. A Page Revision includes the Page and all of its Audience Area states together, so restoring a revision restores the exact Page state rather than combining areas from different points in time.
+One immutable coherent historical state of a Wiki.js Page. A Page Revision includes the Page and all of its Audience Area states together, so restoring a revision restores the exact Page state rather than combining areas from different points in time. Normal Wiki.js direct saves make the latest state live immediately while retaining prior revisions.
 
 ### Page Structure
 
 The revisioned authored metadata of a Page: its properties, typed relationships, and map references. It is included in every Page Revision. Aliases are excluded because they are live navigation records rather than authored content state.
+
+### Page Body
+
+The normal Wiki.js `pages.content` body of a Page. It is that Page's Widely Known Audience Area and uses the familiar direct-save and history workflow.
+
+### Property Definition
+
+A versioned, typed property definition owned by a Datapack. It defines the vocabulary and validation for properties that Pages from that Datapack may use.
+
+### Cross-Datapack Relationship
+
+A revisioned relationship between Pages from any local or installed Datapack source. Its type is namespaced and owned by a Datapack, which defines its semantics and compatibility; KV-Wiki provides storage, authorization, and navigation but does not guarantee compatibility between Datapacks.
+
+### Map Reference
+
+A revisioned Page-structure record that links a Page to a map asset or map Page, with optional coordinates, label, and presentation metadata.
+
+### Alias
+
+A mutable navigation record for a Page. Global aliases are preferred by default; an administrator may choose a Datapack-scoped route instead. Conflict-resolution workflow is a separate decision.
