@@ -24,7 +24,7 @@ A canonical item of wiki content with a globally stable opaque identity. An Entr
 
 ### Audience Area
 
-One separately authored content area of an Entry, classified as Widely Known, Gated, Secret, or GM Only. An Entry has at most one Area of each kind. Material requiring distinct discovery conditions is modelled as separate Entries with explicit relationships rather than multiple Areas of the same kind.
+One separately authored content area of a Wiki.js Page, classified as Widely Known, Gated, Secret, or GM Only. It is stored separately from the Page and linked through `pages.id`; a Page has at most one Area of each kind. Material requiring distinct discovery conditions is modelled as separate Pages with explicit relationships rather than multiple Areas of the same kind.
 
 ### GM Note
 
