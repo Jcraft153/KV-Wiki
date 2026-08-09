@@ -17,3 +17,7 @@ An explicit operation that saves the complete installation state, including admi
 ### Clear-down
 
 An explicit factory-reset operation that removes all installation data and returns KV-Wiki to a clean blank-slate state. It is distinct from Backup and does not itself preserve recoverable data.
+
+### Entry
+
+A canonical item of wiki content with a globally stable opaque identity. An Entry belongs to exactly one Datapack Installation; aliases and display paths are mutable, Datapack-scoped navigation records, while relationships and map references target the stable Entry identity.
