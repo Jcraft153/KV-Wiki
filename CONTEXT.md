@@ -29,3 +29,7 @@ One separately authored content area of a Wiki.js Page, classified as Widely Kno
 ### GM Note
 
 A single GM/Admin-only note stored in its own table and linked to a Wiki.js Page through that Page's `pages.id`. It is not an Audience Area and is fetched only for GM or Admin requests; player-facing reads never retrieve it.
+
+### Page Revision
+
+One coherent historical state of a Wiki.js Page. A Page Revision includes the Page and all of its Audience Area states together, so restoring a revision restores the exact Page state rather than combining areas from different points in time.
