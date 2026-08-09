@@ -28,4 +28,4 @@ One separately authored content area of an Entry, classified as Widely Known, Ga
 
 ### GM Note
 
-A single GM/Admin-only note attached to an Entry. It is not an Audience Area, is never included in player-facing projections, and has an independent draft and immutable published-revision lifecycle.
+A single GM/Admin-only note stored separately from standard Entry content. It is not an Audience Area and is fetched only for GM or Admin requests; player-facing reads never retrieve it.
