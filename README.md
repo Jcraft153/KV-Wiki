@@ -11,6 +11,8 @@
 
 ##### A fork of wiki.js, KV-Wiki is a wiki app built on NodeJS which seeks to add role-based visibility tools designed for running a TTRPG Campaign and revealing emerging information to players as they progress.
 
+<b> This repo has not yet published a release candidate, it is considered a work in progress </b>
+
 </div>
 
 
